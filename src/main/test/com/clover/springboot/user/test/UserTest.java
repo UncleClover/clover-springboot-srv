@@ -19,7 +19,7 @@ public class UserTest {
 	public void insertTest() {
 		UserInfo user = new UserInfo();
 		user.setAddr("河南郑州");
-		user.setId("2");
+		user.setId("3");
 		user.setPwd("1234567890");
 		user.setPwdRandom("123");
 		user.setName("clover");
