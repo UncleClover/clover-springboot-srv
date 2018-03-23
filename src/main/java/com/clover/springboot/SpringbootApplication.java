@@ -23,6 +23,7 @@ import org.springframework.core.io.support.ResourcePatternResolver;
  */
 @SpringBootApplication
 public class SpringbootApplication {
+	@Bean
 	@ConditionalOnMissingBean // 当容器里没有指定的 Bean 的情况下创建该对象
 	public SqlSessionFactoryBean sqlSessionFactory(DataSource dataSource) {
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
@@ -44,7 +45,7 @@ public class SpringbootApplication {
 		}
 
 		// 设置别名包
-		// sqlSessionFactoryBean.setTypeAliasesPackage("com.light.domain");
+		sqlSessionFactoryBean.setTypeAliasesPackage("com.clover.springboot.mapper");
 
 		return sqlSessionFactoryBean;
 	}
@@ -53,7 +54,7 @@ public class SpringbootApplication {
 	@ConditionalOnBean(SqlSessionFactoryBean.class) // 当 SqlSessionFactoryBean
 	public MapperScannerConfigurer mapperScannerConfigurer() {
 		MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
-		mapperScannerConfigurer.setBasePackage("com.light.dao");
+		mapperScannerConfigurer.setBasePackage("com.clover.springboot.mapper");
 		return mapperScannerConfigurer;
 	}
 }
