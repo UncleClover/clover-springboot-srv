@@ -28,3 +28,5 @@ hs_err_pid*
 .gradle/vcsWorkingDirs/gc.properties
 .settings/gradle/org.springsource.ide.eclipse.gradle.core.prefs
 .settings/org.eclipse.jdt.core.prefs
+.classpath
+.project
