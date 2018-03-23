@@ -29,4 +29,20 @@ public class UserTest {
 
 		userMapper.insert(user);
 	}
+	
+	@Test
+	public void addUser(){
+		UserInfo user = new UserInfo();
+		user.setAddr("河南郑州");
+		user.setId("5");
+		user.setPwd("1234567890");
+		user.setPwdRandom("123");
+		user.setName("clover");
+		user.setSex("1");
+		user.setLoginTime("2018-03-21");
+		user.setCreateTime("2018-01-01");
+		user.setIdCard("412727199007082019");
+		
+		userMapper.addUser(user);
+	}
 }

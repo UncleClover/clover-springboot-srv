@@ -26,6 +26,7 @@ public class UserInfo implements Serializable {
 	private Date birthday;
 	private String loginTime;
 	private String createTime;
+	private String idCard;
 	
 	
 	public String getId() {
@@ -106,5 +107,13 @@ public class UserInfo implements Serializable {
 
 	public void setCreateTime(String createTime) {
 		this.createTime = createTime;
+	}
+
+	public String getIdCard() {
+		return idCard;
+	}
+
+	public void setIdCard(String idCard) {
+		this.idCard = idCard;
 	}
 }

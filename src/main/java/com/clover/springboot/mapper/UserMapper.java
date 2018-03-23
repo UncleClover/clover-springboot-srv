@@ -22,4 +22,14 @@ public interface UserMapper {
 	 * @param user
 	 */
 	public void insert(UserInfo user);
+
+	/**
+	 * oracle新增用户测试
+	 * 
+	 * @author zhangdq
+	 * @time 2018年3月23日 上午11:25:22
+	 * @Email qiang900714@126.com
+	 * @param user
+	 */
+	public void addUser(UserInfo user);
 }

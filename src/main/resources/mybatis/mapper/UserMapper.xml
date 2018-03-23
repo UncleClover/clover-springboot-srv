@@ -7,4 +7,9 @@
 		insert into t_chm_user (USER_ID, USER_ACCOUNT, USER_PASSWORD, password_random, NICK_NAME, SEX, last_login_time, create_date)
 		values (#{id}, #{id}, #{pwd}, #{pwdRandom}, #{name}, #{sex}, #{loginTime}, #{createTime})
 	</insert>
+	
+	<insert id="addUser" parameterType="com.clover.springboot.model.UserInfo">
+		insert into t_chm_user (USER_ID, USER_ACCOUNT, USER_NAME, SEX, id_card)
+		values (#{id}, #{id}, #{name}, #{sex}, #{idCard})	
+	</insert>
 </mapper>
