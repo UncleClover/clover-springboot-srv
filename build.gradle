@@ -4,8 +4,8 @@ buildscript {
 	}
 	repositories {
 		// mavenCentral()
-		// maven { url "http://127.0.0.1:8082/nexus/content/groups/public/"} 
-		maven {url "http://maven.aliyun.com/nexus/content/groups/public/"}
+		maven { url "http://127.0.0.1:8082/nexus/content/groups/public/"} 
+		// maven {url "http://maven.aliyun.com/nexus/content/groups/public/"}
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -22,8 +22,8 @@ sourceCompatibility = 1.8
 
 repositories {
 	// mavenCentral()
-	// maven { url "http://127.0.0.1:8082/nexus/content/groups/public/"} 
-	maven {url "http://maven.aliyun.com/nexus/content/groups/public/"}
+	maven { url "http://127.0.0.1:8082/nexus/content/groups/public/"} 
+	// maven {url "http://maven.aliyun.com/nexus/content/groups/public/"}
 }
 
 sourceSets{
@@ -42,6 +42,7 @@ configurations{
 }
 
 dependencies {
+	compile "com.clover.api:tools:1.0.2-SNAPSHOT"
 	compile "org.springframework.boot:spring-boot-starter-jdbc"
 	compile "org.springframework.boot:spring-boot-starter-log4j2"
 	compile "org.mybatis:mybatis:3.4.4"
